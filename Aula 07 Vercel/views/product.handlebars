@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="details-card">
+    <a href="/" style="text-decoration: none; color: #3498db;">← Voltar</a>
+    <h1 style="text-align: left; margin-top: 20px;">{{product.title}}</h1>
+    <p class="price">R$ {{product.price}}</p>
+    <p class="sales-badge">{{product.sales}} compras efetuadas</p>
+    
+    <h3 style="margin-top: 20px;">Descrição:</h3>
+    <p>{{product.description}}</p>
+
+    <div class="comments-section">
+        <h3>Comentários dos Clientes:</h3>
+        <ul>
+            {{#each product.comments}}
+                <li class="comment-item">"{{this}}"</li>
+            {{/each}}
+        </ul>
+
+        <div class="details-card">
+    <a href="/" class="back-link">← Voltar para a loja</a>
+    
+        <div class="comment-form">
+            <h4>Deixe sua opinião:</h4>
+            <form action="/product/{{product.id}}/comment" method="POST">
+                <textarea name="comment" placeholder="O que você achou deste produto?" required></textarea>
+                <button type="submit" class="btn">Enviar Comentário</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+    </div>
+</div>
+    
+</body>
+</html>
+

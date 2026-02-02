@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Confira os nossos produtos:</h1>
+    {{#each products}}
+
+    <div>
+        <h2> {{this.title}}</h2>
+         <p class="price">R$ {{this.price}}</p>
+        <p class="sales-badge">{{this.sales}} vendas realizadas</p>
+        <a href="/product/{{this.id}}" class="btn">Ver Detalhes</a>
+    </div>
+    {{/each}}
+    
+</body>
+</html>
+
