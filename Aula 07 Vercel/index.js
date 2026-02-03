@@ -45,18 +45,18 @@ app.get('/product/:id', (req, res)=>{
 
 
 // Rota para receber o novo comentário
-app.post('/product/:id/comment', (req, res) => {
-    const productId = parseInt(req.params.id);
-    const newComment = req.body.comment;
+//app.post('/product/:id/comment', (req, res) => {
+   // const productId = parseInt(req.params.id);
+  //  const newComment = req.body.comment;
 
-    const product = products.find(p => p.id === productId);
+  //  const product = products.find(p => p.id === productId);
     
-    if (product && newComment) {
-        product.comments.push(newComment);
-    }
+  //  if (product && newComment) {
+  //      product.comments.push(newComment);
+ //   }
 
-    res.redirect(`/product/${productId}`);
-});
+//   res.redirect(`/product/${productId}`);
+//});
 
 
 app.listen(port, ()=>{

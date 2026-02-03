@@ -8,15 +8,14 @@
 <body>
 
     <h1>Confira os nossos produtos:</h1>
-    {{#each products}}
-
+    <div class="main-container-produtos">
+         {{#each products}}
     <div>
         <h2> {{this.title}}</h2>
-         <p class="price">R$ {{this.price}}</p>
-        <p class="sales-badge">{{this.sales}} vendas realizadas</p>
-        <a href="/product/{{this.id}}" class="btn">Ver Detalhes</a>
+        <p><a href="/product/{{this.id}}">Ver Detalhes</a></p>
     </div>
     {{/each}}
+    </div>
     
 </body>
 </html>
