@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+</head>
+<body>
+    
+   <h1 class="page-title">Seu Carrinho de Compras</h1>
+
+<div class="cart-container">
+    {{#if hasItems}}
+    <div class="cart-items">
+        <table class="cart-table">
+            <thead>
+                <tr>
+                    <th>Curso</th>
+                    <th>Preço</th>
+                    <th>Ação</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each cartItems}}
+                <tr>
+                    <td class="cart-product-info">
+                        <img src="{{this.img}}" alt="Thumb" class="cart-thumb">
+                        <div>
+                            <strong>{{this.nome}}</strong>
+                            <br><small>{{this.titulo_completo}}</small>
+                        </div>
+                    </td>
+                    <td>{{formatCurrency this.preco}}</td>
+                    <td><a href="/carrinho" class="btn-remove">Remover</a></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+    <div class="cart-summary">
+        <h2>Resumo do Pedido</h2>
+        <div class="summary-row">
+            <span>Subtotal:</span>
+            <span>R$ {{total}}</span>
+        </div>
+        <div class="summary-row total">
+            <span>Total:</span>
+            <span>R$ {{total}}</span>
+        </div>
+        <a href="/checkout" class="btn btn-success btn-block">Finalizar Compra</a>
+        <a href="/" class="continue-shopping">Continuar comprando</a>
+    </div>
+    
+    {{else}}
+    <div class="empty-cart">
+        <p>Seu carrinho está vazio.</p>
+        <a href="/" class="btn btn-primary">Ver Cursos</a>
+    </div>
+    {{/if}}
+</div>
+
+</body>
+</html>

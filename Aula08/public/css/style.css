@@ -1,0 +1,101 @@
+/* --- Variáveis e Reset --- */
+:root {
+    --primary-color: #2c3e50;    /* Azul escuro corporativo */
+    --secondary-color: #34495e;
+    --accent-color: #3498db;     /* Azul destaque */
+    --success-color: #27ae60;    /* Verde compra */
+    --text-dark: #333;
+    --text-light: #ecf0f1;
+    --bg-light: #f4f7f6;
+    --container-width: 1100px;
+}
+
+* {box-sizing: border-box; margin: 0; padding: 0;}
+body { font-family: 'Roboto', sans-serif; color: var(--text-dark); background-color: var(--bg-light); line-height: 1.6; }
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+img { max-width: 100%; display: block; }
+.container { width: 90%; max-width: var(--container-width); margin: auto; }
+
+/* --- Componentes Globais --- */
+.btn { display: inline-block; padding: 10px 20px; border-radius: 5px; font-weight: bold; transition: background 0.3s; border: none; cursor: pointer;}
+.btn-primary { background-color: var(--primary-color); color: white; }
+.btn-primary:hover { background-color: var(--secondary-color); }
+.btn-accent { background-color: var(--accent-color); color: white; }
+.btn-accent:hover { background-color: #2980b9; }
+.btn-success { background-color: var(--success-color); color: white; }
+.btn-success:hover { background-color: #219653; }
+.btn-large { padding: 15px 30px; font-size: 1.1rem; }
+.btn-block { display: block; width: 100%; text-align: center; }
+
+.page-title { margin: 30px 0; text-align: center; color: var(--primary-color); }
+.section-title { margin-bottom: 25px; color: var(--primary-color); font-size: 1.8rem; }
+
+/* --- Header & Footer --- */
+.main-header { background: var(--primary-color); color: white; padding: 1rem 0; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+.header-content { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 1.5rem; color: white; }
+.nav-list { display: flex; }
+.nav-list li a { padding: 10px 15px; color: var(--text-light); transition: color 0.3s; }
+.nav-list li a:hover { color: var(--accent-color); }
+.cart-link { background: rgba(255,255,255,0.1); border-radius: 20px; margin-left: 10px;}
+
+.main-content { padding: 40px 0; min-height: 60vh; }
+.main-footer { background: var(--secondary-color); color: var(--text-light); text-align: center; padding: 20px 0; margin-top: 40px; }
+
+/* --- Home & Grid de Cursos --- */
+.hero-banner {
+    background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://placehold.co/1200x400/2c3e50/ffffff?text=ISO+Standards+Background');
+    background-size: cover; background-position: center; color: white; text-align: center; padding: 80px 20px; border-radius: 8px; margin-bottom: 40px;
+}
+.hero-text h1 { font-size: 2.5rem; margin-bottom: 15px; }
+.hero-text p { margin-bottom: 25px; font-size: 1.2rem; }
+
+.grid-courses { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 30px; }
+.course-card { background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 3px 10px rgba(0,0,0,0.05); transition: transform 0.3s; display: flex; flex-direction: column; }
+.course-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.1); }
+.card-content { padding: 20px; flex-grow: 1; display: flex; flex-direction: column; }
+.card-content h3 { color: var(--primary-color); margin-bottom: 5px; }
+.course-subtitle { color: #7f8c8d; font-size: 0.9rem; margin-bottom: 15px; flex-grow: 1; }
+.card-footer { display: flex; justify-content: space-between; align-items: center; border-top: 1px solid #eee; padding-top: 15px; }
+.price { font-weight: bold; color: var(--primary-color); font-size: 1.2rem; }
+
+/* --- Detalhe do Produto --- */
+.product-detail-container { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; background: white; padding: 30px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+.product-image img { border-radius: 8px; }
+.product-info h1 { color: var(--primary-color); }
+.subtitle { color: #7f8c8d; margin-bottom: 20px; font-weight: 400; }
+.description { margin-bottom: 30px; }
+.purchase-box { background: var(--bg-light); padding: 25px; border-radius: 8px; text-align: center; margin-bottom: 20px; border: 1px solid #eee; }
+.big-price { display: block; font-size: 2.5rem; color: var(--primary-color); font-weight: bold; }
+.payment-info { color: #7f8c8d; margin-bottom: 20px; }
+.back-link { color: var(--accent-color); }
+
+/* --- Carrinho e Checkout --- */
+.cart-container, .checkout-container { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+.cart-container { display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+
+.cart-table { width: 100%; border-collapse: collapse; }
+.cart-table th, .cart-table td { padding: 15px; text-align: left; border-bottom: 1px solid #eee; }
+.btn-remove { color: #e74c3c; background: none; border: none; cursor: pointer; text-decoration: underline; }
+
+.cart-summary { background: var(--bg-light); padding: 20px; border-radius: 8px; height: fit-content; }
+.summary-row { display: flex; justify-content: space-between; margin-bottom: 15px; }
+.summary-row.total { font-weight: bold; font-size: 1.3rem; color: var(--primary-color); border-top: 2px solid #ddd; padding-top: 15px; }
+.continue-shopping { display: block; text-align: center; margin-top: 15px; color: var(--accent-color); }
+
+.checkout-form { max-width: 600px; margin: auto; }
+.form-section { margin-bottom: 30px; }
+.form-section h2 { border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 20px; color: var(--secondary-color); }
+.form-group { margin-bottom: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+label { display: block; margin-bottom: 8px; font-weight: bold; color: var(--secondary-color); }
+input[type="text"], input[type="email"] { width: 100%; padding: 12px; border: 1px solid #ddd; border-radius: 5px; font-size: 1rem; }
+
+/* --- Responsividade --- */
+@media (max-width: 768px) {
+    .header-content { flex-direction: column; }
+    .nav-list { margin-top: 15px; }
+    .product-detail-container, .cart-container { grid-template-columns: 1fr; }
+    .hero-text h1 { font-size: 1.8rem; }
+}

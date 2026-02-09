@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <div class="product-detail-container">
+    <div class="product-image">
+        <img src="{{course.img}}" alt="{{course.nome}}">
+    </div>
+    <div class="product-info">
+        <div class="breadcrumbs">
+            <a href="/">Home</a> > <a href="/cursos">Cursos</a> > <span>{{course.nome}}</span>
+        </div>
+        
+        <h1>{{course.nome}}</h1>
+        <h2 class="subtitle">{{course.titulo_completo}}</h2>
+        <p class="description">{{course.desc}}</p>
+        
+        <ul class="benefits-list">
+            <li>✓ Certificado válido em todo território nacional</li>
+            <li>✓ Acesso vitalício às aulas</li>
+            <li>✓ Material de apoio em PDF</li>
+        </ul>
+        
+        <div class="purchase-box">
+            <span class="big-price">{{formatCurrency course.preco}}</span>
+            <p class="payment-info">Pagamento único. Sem mensalidades.</p>
+            
+            <a href="/carrinho?add={{course.id}}" class="btn btn-success btn-large">Matricular-se Agora</a>
+        </div>
+        
+        <a href="/" class="back-link">← Voltar para a loja</a>
+    </div>
+</div>
+     
+</body>
+</html>
+
