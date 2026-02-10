@@ -10,16 +10,52 @@
 <body>
     <header class="main-header">
         <div class="container header-content">
-            <a href="/" class="logo">ISO <strong>Academy</strong></a>
+            <a href="/" class="logo">ISO<strong>Academy</strong></a>
+
             <nav class="main-nav">
                 <ul class="nav-list">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/cursos">Todos os Cursos</a></li>
+                    <li><a href="/cursos_gratuitos">Cursos Gratuitos</a></li>
+                    <li><a href="/cursos">Cursos</a></li>
+                    <li><a href="/cursos_in_company">Cursos in Company</a></li>
+                    <li><a href="/cursos_em_destaque">Cursos em Destaque</a></li>
                     <li><a href="/carrinho" class="cart-link">Carrinho 🛒</a></li>
+                    <li><a href="login.html" class="nav-link">Login</a></li>
                 </ul>
             </nav>
+
+            <div class="accessibility-bar" id="accessibilityBar">
+                <button id="fontIncrease" aria-label="Aumentar tamanho da fonte">A+</button>
+                <button id="fontDecrease" aria-label="Diminuir tamanho da fonte">A-</button>
+                <button id="highContrast" aria-label="Ativar modo alto contraste">☼</button>
+            </div>
+
         </div>
     </header>
+
+
+        <header class="header">
+                   
+            <!-- Botão do menu hamburguer -->
+            <button class="hamburger" id="hamburger" aria-label="Menu principal" aria-expanded="false">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+
+            <!-- Menu de navegação principal -->
+            <nav class="menu" id="main-menu">
+                <ul class="menu-list">
+                    <li><a href="/nossos_numeros" class="nav-link">Nossos Números</a></li>
+                    <li><a href="/depoimentos" class="nav-link">Depoimentos</a></li>                    
+                </ul>
+            </nav>
+        </header>
+            
+
+
+        
+
 
     <main class="container main-content">
         {{{body}}}

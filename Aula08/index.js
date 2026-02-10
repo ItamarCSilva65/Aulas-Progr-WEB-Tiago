@@ -47,9 +47,39 @@ app.get('/cursos', (req, res) => {
     res.render('cursos')
 });
 
-app.get('/cursos_em_destaque', (req, res) => {
-    res.render('cursos_destaques')
+app.get('/cursos_gratuitos', (req, res) => {
+    res.render('cursos_gratuitos')
 });
+
+
+app.get('/cursos', (req, res) => {
+    res.render('cursos')
+});
+
+
+app.get('/cursos_in_company', (req, res) => {
+    res.render('cursos_in_company')
+});
+
+
+app.get('/cursos_em_destaque', (req, res) => {
+    res.render('cursos_em_destaque')
+});
+
+
+
+app.get('/nossos_numeros', (req, res) => {
+    res.render('nossos_numeros')
+});
+
+
+
+
+app.get('/depoimentos', (req, res) => {
+    res.render('depoimentos')
+});
+
+
 
 app.get('/carrinho', (req, res) => {
     // Verifica se veio um ID pela URL (ex: /carrinho?add=iso-9001)

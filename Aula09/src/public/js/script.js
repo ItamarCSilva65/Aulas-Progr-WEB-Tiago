@@ -1,0 +1,1 @@
+console.log("ICEC Cursos Online carregado com sucesso 🚀");
