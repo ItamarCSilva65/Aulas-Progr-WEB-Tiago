@@ -7,5 +7,16 @@
 </head>
 <body>
     <h1>Cursos</h1>
+    {{#each coursesData}}
+        <div>
+            <h2>{{this.nome}}</h2>
+            <p>Preço: R$ {{this.preco}}</p>
+            <p>{{this.desc}}</p>
+            <img src="/img/{{this.img}}" alt="{{this.nome}}" width="200">
+            {{#if this.destaque}}
+                <p><strong>Destaque!</strong></p>
+            {{/if}}
+        </div>
+    {{/each}}
 </body>
 </html>

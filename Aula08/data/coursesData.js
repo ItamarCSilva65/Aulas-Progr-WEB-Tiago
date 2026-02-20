@@ -8,7 +8,7 @@ const courses = [
         preco: 299.90,
         desc: 'Domine os requisitos para implementar um sistema de gestão da qualidade focado na satisfação do cliente e melhoria contínua.',
         // Imagem real de escritório corporativo/reunião
-        img: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        img: '9001.1.png',
         destaque: true
     },
     {
@@ -18,7 +18,7 @@ const courses = [
         preco: 299.90,
         desc: 'Aprenda a gerenciar responsabilidades ambientais de forma sistemática, contribuindo para o pilar ambiental da sustentabilidade.',
         // Imagem real de natureza/sustentabilidade
-        img: 'https://images.unsplash.com/photo-1542601906990-b4d3fb7d5c73?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        img: '14001.1.png',
         destaque: true
     },
     {
@@ -28,7 +28,7 @@ const courses = [
         preco: 349.90,
         desc: 'O padrão internacional para reduzir riscos ocupacionais e proporcionar locais de trabalho seguros e saudáveis.',
         // Imagem real de engenharia/segurança
-        img: 'https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        img: '45001.1.png',
         destaque: true
     },
     {
@@ -38,7 +38,7 @@ const courses = [
         preco: 399.90,
         desc: 'Requisitos específicos para sistemas de gestão da qualidade na indústria de dispositivos médicos.',
         // Imagem real de laboratório médico
-        img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        img: '13485.1.png',
         destaque: false
     },
     {
@@ -48,7 +48,7 @@ const courses = [
         preco: 450.00,
         desc: 'A norma essencial para laboratórios que desejam demonstrar competência técnica e resultados válidos.',
         // Imagem real de cientista/microscópio
-        img: 'https://images.unsplash.com/photo-1532094349884-543bc11b234d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        img: '17025.png',
         destaque: false
     },
     {
@@ -58,7 +58,7 @@ const courses = [
         preco: 250.00,
         desc: 'Torne-se um auditor interno. Aprenda a planejar e realizar auditorias de acordo com as melhores práticas.',
         // Imagem real de documentos/checklists
-        img: 'https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80',
+        img: '19011.png',
         destaque: false
     }
 ];

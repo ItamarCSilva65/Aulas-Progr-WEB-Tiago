@@ -1,5 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
+const coursesData = require('./data/coursesData')
+const coursos_gratuitos = require('./data/coursos_gratuitosData')
 const app = express()
 const port = 3000
 
@@ -10,29 +12,8 @@ app.use(express.static('public'))
 // IMPORTANTE: Necessário para ler dados enviados via formulário (POST)
 app.use(express.urlencoded({ extended: true }));
 
-const products = [
-    {   id: 1,
-        title: "Livro",
-        price: 12.99,
-        description: "Aprenda a criar aplicações escaláveis e de alta performance com este guia completo.",
-        sales: 154,
-        comments: ["Livro excelente!", "Didática muito boa.", "Super recomendo!"]
-    },
-    {   id: 2,
-        title: "Caneca",
-        price: 49.99,
-        description: "Caneca de cerâmica de alta qualidade para acompanhar suas madrugadas de código.",
-        sales: 89,
-        comments: ["Linda!", "Fica uma gracinha na mesa!", "Chegou rápido."]
-    },
-    {   id: 3,
-        title: "Camisa",
-        price: 59.99,
-        description: "Conforto e estilo com tecido 100% algodão para o dia a dia.",
-        sales: 210,
-        comments: ["Amei o caimento.", "Tecido muito bom.", "Vou comprar outra."]
-    }
-]
+
+
 
 app.get('/', (req,res)=>{
     res.render('home', {products})
@@ -44,11 +25,11 @@ app.get('/product/:id', (req, res)=>{
     })
 
 app.get('/cursos', (req, res) => {
-    res.render('cursos')
+    res.render('cursos', {coursesData})
 });
 
 app.get('/cursos_gratuitos', (req, res) => {
-    res.render('cursos_gratuitos')
+    res.render('cursos_gratuitos', {coursos_gratuitos})
 });
 
 
