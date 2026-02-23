@@ -1,6 +1,6 @@
 // data/coursos_gratuitosData.js
 
-const coursos_gratuitos = [
+const cursos_gratuitos = [
     {
         id: 'iso-9001',
         nome: 'ISO 9001:2015',

@@ -1,6 +1,6 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-const coursesData = require('./data/coursesData')
+const products = require('./data/cursesData')
 const coursos_gratuitos = require('./data/coursos_gratuitosData')
 const app = express()
 const port = 3000
@@ -25,7 +25,7 @@ app.get('/product/:id', (req, res)=>{
     })
 
 app.get('/cursos', (req, res) => {
-    res.render('cursos', {coursesData})
+    res.render('cursos', {products})
 });
 
 app.get('/cursos_gratuitos', (req, res) => {
@@ -107,5 +107,5 @@ app.get('/carrinho', (req, res) => {
 
 
 app.listen(port, ()=>{
-    console.log('O servidor está rodando na porta ${port}')
+    console.log(`O servidor está rodando na porta ${port}`)
 })
