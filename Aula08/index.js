@@ -1,7 +1,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
-const products = require('./data/cursesData')
-const coursos_gratuitos = require('./data/coursos_gratuitosData')
+const products = require('./data/coursesData')
+const coursos_gratuitos = require('./data/cursos_gratuitosData')
 const app = express()
 const port = 3000
 
