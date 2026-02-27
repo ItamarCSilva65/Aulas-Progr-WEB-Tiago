@@ -1,11 +1,230 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Cursos em Company</h1>
-</body>
-</html>
+<!-- Hero Banner -->
+<section class="in-company-section">
+    <div class="hero-banner"
+        style="background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.9)), url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200'); margin-bottom: 0; border-radius: 8px 8px 0 0;">
+        <div class="hero-text">
+            <h1>🏢 Treinamentos In Company</h1>
+            <p>Cursos ISO personalizados, realizados nas instalações da sua empresa, para toda a equipe.</p>
+            <div class="d-flex gap-3 justify-content-center flex-wrap mt-3">
+                <a href="#proposta" class="btn btn-outline-light btn-lg px-4">📋 Solicitar Proposta</a>
+                <a href="/cursos" class="btn btn-light btn-lg px-4">📚 Ver Catálogo</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Diferenciais em grid Bootstrap responsivo -->
+    <div class="ic-benefits-bar">
+        <div class="container-fluid py-3">
+            <div class="row row-cols-2 row-cols-md-3 row-cols-lg-5 g-3 justify-content-center text-center text-white">
+                <div class="col">
+                    <div class="ic-benefit p-3 rounded-3 h-100" style="background: rgba(255,255,255,0.08);">
+                        <div style="font-size:2rem;">🎯</div>
+                        <strong class="d-block mt-2" style="font-size:0.85rem;">Conteúdo Personalizado</strong>
+                        <p class="mb-0 mt-1" style="font-size:0.75rem; opacity:0.8;">Currículo adaptado à realidade da
+                            sua empresa</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="ic-benefit p-3 rounded-3 h-100" style="background: rgba(255,255,255,0.08);">
+                        <div style="font-size:2rem;">📅</div>
+                        <strong class="d-block mt-2" style="font-size:0.85rem;">Datas Flexíveis</strong>
+                        <p class="mb-0 mt-1" style="font-size:0.75rem; opacity:0.8;">Escolha horários e dias que atendam
+                            sua equipe</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="ic-benefit p-3 rounded-3 h-100" style="background: rgba(255,255,255,0.08);">
+                        <div style="font-size:2rem;">👥</div>
+                        <strong class="d-block mt-2" style="font-size:0.85rem;">Turmas Exclusivas</strong>
+                        <p class="mb-0 mt-1" style="font-size:0.75rem; opacity:0.8;">Treinamento fechado só para seus
+                            colaboradores</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="ic-benefit p-3 rounded-3 h-100" style="background: rgba(255,255,255,0.08);">
+                        <div style="font-size:2rem;">📜</div>
+                        <strong class="d-block mt-2" style="font-size:0.85rem;">Certificação Internacional</strong>
+                        <p class="mb-0 mt-1" style="font-size:0.75rem; opacity:0.8;">Reconhecida globalmente pelas
+                            normas ISO</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="ic-benefit p-3 rounded-3 h-100" style="background: rgba(255,255,255,0.08);">
+                        <div style="font-size:2rem;">💰</div>
+                        <strong class="d-block mt-2" style="font-size:0.85rem;">Economia em Escala</strong>
+                        <p class="mb-0 mt-1" style="font-size:0.75rem; opacity:0.8;">Mais colaboradores = menor custo
+                            por pessoa</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Catálogo de Cursos In Company -->
+<section style="margin: 50px 0;">
+    <h2 class="section-title" style="text-align: center;">Cursos Disponíveis In Company</h2>
+    <p style="text-align: center; color: #7f8c8d; margin-bottom: 40px; font-size: 1.05rem;">Todos os cursos do nosso
+        catálogo podem ser realizados na modalidade In Company. Consulte nossa equipe para valores personalizados.</p>
+
+    <div class="grid-courses">
+        {{#each courses}}
+        <article class="course-card ic-card">
+            <div class="card-image" style="position: relative;">
+                <span
+                    style="position: absolute; top: 10px; right: 10px; background: #2c3e50; color: white; padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; font-weight: bold;">IN
+                    COMPANY</span>
+                <img src="{{this.img}}" alt="{{t this.nome ../lang}}"
+                    style="width: 100%; height: 200px; object-fit: cover;">
+            </div>
+            <div class="card-content">
+                <h3>{{t this.nome ../lang}}</h3>
+                <p class="course-subtitle">{{t this.titulo_completo ../lang}}</p>
+                <p style="font-size: 0.88rem; color: #555; flex-grow: 1;">{{t this.desc ../lang}}</p>
+                <div class="card-footer"
+                    style="margin-top: auto; border-top: 1px solid #eee; padding-top: 12px; display: flex; flex-direction: column; gap: 8px;">
+                    <span class="badge bg-success fs-6 text-center" data-i18n="ic_consult">💬 Sob Consulta / In
+                        Company</span>
+                    <div class="d-flex gap-2">
+                        <a href="/curso/{{this.id}}" class="btn btn-outline-secondary btn-sm flex-fill"
+                            data-i18n="ic_btn_details">🔍 Detalhes</a>
+                        <a href="#proposta" class="btn btn-primary btn-sm flex-fill" data-i18n="ic_btn_propose">📩
+                            Proposta</a>
+                    </div>
+                </div>
+            </div>
+        </article>
+        {{else}}
+        <p style="text-align: center; width: 100%;">Nenhum curso disponível no momento.</p>
+        {{/each}}
+    </div>
+</section>
+
+<!-- Formulário de Proposta -->
+<section id="proposta"
+    style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 20px; scroll-margin-top: 100px;">
+    <div class="info-side">
+        <h2 class="section-title">Por que In Company é a melhor escolha?</h2>
+        <p style="margin-bottom: 20px; color: #555;">Adaptamos o conteúdo de qualquer um de nossos cursos ISO à
+            realidade do seu negócio. Eliminamos o genérico e focamos nos desafios reais da sua equipe.</p>
+        <ul class="benefits-list" style="list-style: none; padding: 0;">
+            <li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px;">
+                <span style="color: #27ae60; font-size: 1.2rem;">✓</span> Turmas exclusivas para seus colaboradores
+            </li>
+            <li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px;">
+                <span style="color: #27ae60; font-size: 1.2rem;">✓</span> Estudo de casos reais da sua empresa
+            </li>
+            <li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px;">
+                <span style="color: #27ae60; font-size: 1.2rem;">✓</span> Horários e locais flexíveis
+            </li>
+            <li style="padding: 10px 0; border-bottom: 1px solid #eee; display: flex; align-items: center; gap: 10px;">
+                <span style="color: #27ae60; font-size: 1.2rem;">✓</span> Certificação internacional para toda a equipe
+            </li>
+            <li style="padding: 10px 0; display: flex; align-items: center; gap: 10px;"><span
+                    style="color: #27ae60; font-size: 1.2rem;">✓</span> Melhor custo-benefício por colaborador</li>
+        </ul>
+    </div>
+
+    <div class="form-side"
+        style="background: white; padding: 35px; border-radius: 10px; box-shadow: 0 5px 20px rgba(0,0,0,0.07);">
+        <h3 style="color: var(--primary-color); margin-bottom: 5px;">Solicite uma Proposta Personalizada</h3>
+        <p style="color: #7f8c8d; font-size: 0.9rem; margin-bottom: 25px;">Nossa equipe retorna em até 24h com uma
+            proposta sob medida.</p>
+        <form action="#" method="POST">
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #555;">Nome da
+                    Empresa</label>
+                <input type="text" placeholder="Ex: Empresa XPTO Ltda."
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.95rem;"
+                    required>
+            </div>
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #555;">Nome do
+                    Responsável</label>
+                <input type="text" placeholder="Seu nome completo"
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.95rem;"
+                    required>
+            </div>
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #555;">E-mail
+                    Corporativo</label>
+                <input type="email" placeholder="contato@empresa.com.br"
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.95rem;"
+                    required>
+            </div>
+            <div class="form-group" style="margin-bottom: 15px;">
+                <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #555;">Qual norma ISO
+                    principal?</label>
+                <select
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.95rem;">
+                    <option>ISO 9001:2015 — Qualidade</option>
+                    <option>ISO 14001:2015 — Ambiental</option>
+                    <option>ISO 45001:2018 — SSO</option>
+                    <option>ISO 13485:2016 — Dispositivos Médicos</option>
+                    <option>ISO/IEC 17025:2017 — Laboratórios</option>
+                    <option>ISO 19011:2018 — Auditoria</option>
+                    <option>Mais de uma / Consultoria</option>
+                </select>
+            </div>
+            <div class="form-group" style="margin-bottom: 20px;">
+                <label style="display: block; margin-bottom: 6px; font-weight: bold; color: #555;">Número de
+                    Colaboradores</label>
+                <select
+                    style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px; font-size: 0.95rem;">
+                    <option>5 a 15 colaboradores</option>
+                    <option>16 a 50 colaboradores</option>
+                    <option>51 a 100 colaboradores</option>
+                    <option>Mais de 100 colaboradores</option>
+                </select>
+            </div>
+            <div class="d-grid gap-2 mt-3">
+                <button type="submit" class="btn btn-primary btn-lg">🚀 Solicitar Contato Agora</button>
+                <a href="/login" class="btn btn-outline-secondary">Já tenho conta — Fazer Login</a>
+            </div>
+        </form>
+    </div>
+</section>
+
+<style>
+    .ic-benefits-bar {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background: var(--primary-color);
+        padding: 25px 20px;
+        border-radius: 0 0 8px 8px;
+        gap: 15px;
+        margin-bottom: 20px;
+    }
+
+    .ic-benefit {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: white;
+        gap: 5px;
+        text-align: center;
+    }
+
+    .ic-benefit span {
+        font-size: 1.8rem;
+    }
+
+    .ic-benefit strong {
+        font-size: 0.85rem;
+    }
+
+    .ic-card {
+        border-top: 4px solid #2c3e50;
+    }
+
+    @media (max-width: 768px) {
+        #proposta {
+            grid-template-columns: 1fr;
+        }
+
+        .ic-benefits-bar {
+            justify-content: center;
+        }
+    }
+</style>

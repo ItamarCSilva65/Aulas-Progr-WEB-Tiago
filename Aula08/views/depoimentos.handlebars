@@ -1,11 +1,306 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Depoimentos</h1>
-</body>
-</html>
+<h1 class="page-title" style="font-size: 2.5rem; margin-bottom: 15px;">Depoimentos dos Alunos</h1>
+<p style="text-align: center; margin-bottom: 50px; color: #7f8c8d; font-size: 1.2rem;">Veja o que nossos alunos e
+    clientes corporativos têm a dizer sobre a ISOAcademy.</p>
+
+<!-- Carrossel de Depoimentos -->
+<div class="carousel-section">
+    <div class="carousel-wrapper" id="testimonialCarousel">
+
+        <!-- Slide 1 -->
+        <div class="carousel-slide active">
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <span class="quote-icon">"</span>
+                    <div class="testimonial-header">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?img=68" alt="Foto de Maria Silva"></div>
+                        <div>
+                            <h4>Maria Silva</h4>
+                            <p class="role">Consultora da Qualidade</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"O curso de Formação de Auditores Líderes ISO 9001 foi um divisor de
+                        águas na minha carreira. Conteúdo denso, mas passado de forma extremamente didática. Recomendo
+                        de olhos fechados!"</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <span class="quote-icon">"</span>
+                    <div class="testimonial-header">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?img=11" alt="Foto de Carlos Mendes">
+                        </div>
+                        <div>
+                            <h4>Carlos Mendes</h4>
+                            <p class="role">Gerente de SMS</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Fizemos o treinamento In-Company da ISO 45001 para nossa equipe. O
+                        professor conseguiu engajar a todos com dinâmicas fantásticas e aplicabilidade imediata nas
+                        nossas operações."</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <span class="quote-icon">"</span>
+                    <div class="testimonial-header">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?img=5" alt="Foto de Ana Paula Souza">
+                        </div>
+                        <div>
+                            <h4>Ana Paula Souza</h4>
+                            <p class="role">Analista Ambiental</p>
+                            <div class="stars">★★★★☆</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"A plataforma é muito responsiva e fácil de usar. Os materiais de estudo
+                        da ISO 14001 são referências que uso até hoje no meu trabalho de auditoria ambiental."</p>
+                </article>
+            </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-slide">
+            <div class="testimonials-grid">
+                <article class="testimonial-card">
+                    <span class="quote-icon">"</span>
+                    <div class="testimonial-header">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?img=33"
+                                alt="Foto de Roberto Figueiredo"></div>
+                        <div>
+                            <h4>Roberto Figueiredo</h4>
+                            <p class="role">Diretor de Operações</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Contratamos o pacote In-Company para toda a nossa liderança. A
+                        ISOAcademy entregou um treinamento personalizado que resultou diretamente na nossa certificação
+                        ISO 9001 em 8 meses!"</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <span class="quote-icon">"</span>
+                    <div class="testimonial-header">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?img=47" alt="Foto de Fernanda Lima">
+                        </div>
+                        <div>
+                            <h4>Fernanda Lima</h4>
+                            <p class="role">Engenheira de Qualidade</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Fiz o curso de ISO 13485 para atuar no setor médico e foi a melhor
+                        decisão da minha carreira. O conteúdo técnico é impecável e os instrutores tornam tudo muito
+                        claro e aplicável."</p>
+                </article>
+
+                <article class="testimonial-card">
+                    <span class="quote-icon">"</span>
+                    <div class="testimonial-header">
+                        <div class="avatar"><img src="https://i.pravatar.cc/150?img=22" alt="Foto de Thiago Santos">
+                        </div>
+                        <div>
+                            <h4>Thiago Santos</h4>
+                            <p class="role">Auditor Líder Certificado</p>
+                            <div class="stars">★★★★★</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Após o curso de ISO 19011, passei na prova de Auditor Líder na primeira
+                        tentativa. O material de estudo é completo e os simulados são muito fiéis ao exame real.
+                        Excelente investimento!"</p>
+                </article>
+            </div>
+        </div>
+
+    </div><!-- end carousel-wrapper -->
+
+    <!-- Controles do carrossel -->
+    <div class="carousel-controls">
+        <button class="carousel-btn" id="prevBtn" onclick="moveCarousel(-1)" aria-label="Anterior">&#8249;</button>
+        <div class="carousel-dots">
+            <span class="dot active" onclick="goToSlide(0)"></span>
+            <span class="dot" onclick="goToSlide(1)"></span>
+        </div>
+        <button class="carousel-btn" id="nextBtn" onclick="moveCarousel(1)" aria-label="Próximo">&#8250;</button>
+    </div>
+</div>
+
+<div style="text-align: center; margin-top: 60px;">
+    <a href="/cursos" class="btn btn-primary btn-large">Venha fazer parte da nossa história</a>
+</div>
+
+<style>
+    .carousel-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .carousel-wrapper {
+        position: relative;
+        min-height: 340px;
+    }
+
+    .carousel-slide {
+        display: none;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+    .carousel-slide.active {
+        display: block;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateX(20px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 25px;
+    }
+
+    .testimonial-card {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+        position: relative;
+        border-top: 4px solid var(--accent-color);
+    }
+
+    .quote-icon {
+        font-size: 5rem;
+        color: #ecf0f1;
+        position: absolute;
+        top: -5px;
+        right: 20px;
+        line-height: 1;
+        font-family: Georgia, serif;
+    }
+
+    .testimonial-header {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+        gap: 15px;
+    }
+
+    .avatar {
+        width: 65px;
+        height: 65px;
+        border-radius: 50%;
+        overflow: hidden;
+        flex-shrink: 0;
+        border: 3px solid var(--accent-color);
+    }
+
+    .avatar img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .testimonial-header h4 {
+        color: var(--primary-color);
+        margin: 0;
+        font-size: 1.05rem;
+    }
+
+    .role {
+        color: #7f8c8d;
+        font-size: 0.85rem;
+        margin: 3px 0;
+    }
+
+    .stars {
+        color: #f1c40f;
+        font-size: 1rem;
+    }
+
+    .testimonial-text {
+        font-style: italic;
+        color: #34495e;
+        line-height: 1.7;
+        position: relative;
+        z-index: 1;
+    }
+
+    .carousel-controls {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    .carousel-btn {
+        background: var(--primary-color);
+        color: white;
+        border: none;
+        width: 45px;
+        height: 45px;
+        border-radius: 50%;
+        font-size: 1.8rem;
+        cursor: pointer;
+        line-height: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s;
+    }
+
+    .carousel-btn:hover {
+        background: var(--accent-color);
+    }
+
+    .carousel-dots {
+        display: flex;
+        gap: 10px;
+    }
+
+    .dot {
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: #bdc3c7;
+        cursor: pointer;
+        transition: background 0.3s, transform 0.3s;
+    }
+
+    .dot.active {
+        background: var(--accent-color);
+        transform: scale(1.3);
+    }
+
+    @media (max-width: 768px) {
+        .testimonials-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const dots = document.querySelectorAll('.dot');
+
+    function showSlide(index) {
+        slides.forEach(s => s.classList.remove('active'));
+        dots.forEach(d => d.classList.remove('active'));
+        currentSlide = (index + slides.length) % slides.length;
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+
+    function moveCarousel(dir) { showSlide(currentSlide + dir); }
+    function goToSlide(index) { showSlide(index); }
+
+    // Auto-play every 6 seconds
+    setInterval(() => moveCarousel(1), 6000);
+</script>

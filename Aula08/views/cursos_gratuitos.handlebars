@@ -1,22 +1,78 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <h1>Cursos Gratuitos</h1>
-   {{#each coursos_gratuitos}}
-        <div>
-            <h2>{{this.nome}}</h2>
-            <p>Preço: R$ {{this.preco}}</p>
-            <p>{{this.desc}}</p>
-            <img src="/img/{{this.img}}" alt="{{this.nome}}" width="200">
-            {{#if this.destaque}}
-                <p><strong>Destaque!</strong></p>
-            {{/if}}
+<!-- Hero -->
+<div class="hero-banner"
+    style="background: linear-gradient(rgba(39, 174, 96, 0.85), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1513475382585-d06e58bcb0e0?w=1200');">
+    <div class="hero-text">
+        <h1>📚 Cursos Gratuitos</h1>
+        <p>Comece hoje mesmo! Acesse treinamentos introdutórios sobre Normas ISO sem custo algum.</p>
+        <a href="/login" class="btn btn-accent btn-large">Acessar Gratuitamente</a>
+    </div>
+</div>
+
+<!-- Aviso de destaque -->
+<div
+    style="background: #eafaf1; border-left: 5px solid #27ae60; padding: 20px 30px; border-radius: 5px; margin-bottom: 40px; display: flex; align-items: center; gap: 15px;">
+    <span style="font-size: 2rem;">🎁</span>
+    <div>
+        <strong style="color: #27ae60; font-size: 1.1rem;">Conteúdo 100% Gratuito</strong>
+        <p style="margin: 0; color: #555;">Nenhum cartão de crédito necessário. Basta criar sua conta e começar a
+            aprender agora.</p>
+    </div>
+</div>
+
+<!-- Grid de Cursos Gratuitos -->
+<h2 class="section-title">Cursos Disponíveis Gratuitamente</h2>
+<div class="grid-courses">
+    {{#each coursos_gratuitos}}
+    <article class="course-card free-card">
+        <div class="card-image" style="position: relative;">
+            <span class="badge-free">🎁 GRÁTIS</span>
+            <img src="/img/{{this.img}}" alt="{{this.nome}}" style="width: 100%; height: 200px; object-fit: cover;">
         </div>
-    {{/each}} 
-</body>
-</html>
+        <div class="card-content">
+            <h3>{{this.nome}}</h3>
+            <p class="course-subtitle">{{this.titulo_completo}}</p>
+            <p style="font-size: 0.9rem; color: #555; margin-bottom: 15px;">{{this.desc}}</p>
+            <div class="card-footer">
+                <span class="price free-price">Gratuito</span>
+                <a href="/login" class="btn btn-success">Acessar Agora →</a>
+            </div>
+        </div>
+    </article>
+    {{else}}
+    <p style="text-align:center; width:100%;">Nenhum curso gratuito disponível no momento.</p>
+    {{/each}}
+</div>
+
+<!-- CTA para cursos pagos -->
+<div
+    style="text-align: center; margin-top: 60px; background: white; padding: 40px; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.06);">
+    <h2 style="color: var(--primary-color); margin-bottom: 15px;">Quer ir além?</h2>
+    <p style="color: #7f8c8d; margin-bottom: 25px; font-size: 1.05rem;">Conheça nosso catálogo completo de certificações
+        ISO com materiais avançados, suporte de instrutores e certificado profissional reconhecido.</p>
+    <a href="/cursos" class="btn btn-primary btn-large" style="margin-right: 15px;">Ver Catálogo Completo</a>
+    <a href="/cursos_in_company" class="btn btn-accent btn-large">Treinamento In Company</a>
+</div>
+
+<style>
+    .free-card {
+        border-top: 4px solid #27ae60;
+    }
+
+    .badge-free {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: #27ae60;
+        color: white;
+        padding: 5px 12px;
+        border-radius: 20px;
+        font-weight: bold;
+        font-size: 0.85rem;
+        z-index: 1;
+    }
+
+    .free-price {
+        color: #27ae60 !important;
+        font-size: 1.1rem !important;
+    }
+</style>

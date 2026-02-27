@@ -1,47 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
 {{#unless isFullList}}
 <section class="hero-banner">
     <div class="hero-text">
-        <h1>Domine as Normas ISO</h1>
-        <p>Eleve sua carreira com certificações internacionais.</p>
-        <a href="/cursos_em_destaque" class="btn btn-accent">Ver Cursos em Destaque</a>
+        <h1 data-i18n="hero_title">Domine as Normas ISO</h1>
+        <p data-i18n="hero_sub">Eleve sua carreira com certificações internacionais.</p>
+        <a href="/cursos_em_destaque" class="btn btn-accent" data-i18n="hero_btn">Ver Cursos em Destaque</a>
     </div>
 </section>
 {{/unless}}
 
 <section id="cursos-lista" class="courses-section">
-    <h2 class="section-title">{{#if isFullList}}Catálogo Completo{{else}}Cursos em Destaque{{/if}}</h2>
-    
+    <h2 class="section-title">
+        {{#if isFullList}}
+        <span data-i18n="sec_allcourses">Catálogo Completo</span>
+        {{else}}
+        <span data-i18n="sec_highlights">Cursos em Destaque</span>
+        {{/if}}
+    </h2>
+
     <div class="grid-courses">
         {{#each courses}}
         <article class="course-card">
             <div class="card-image">
                 {{#if this.destaque}}
-                    <span class="badge-destaque">Mais Vendido</span>
+                <span class="badge-destaque" data-i18n="badge_bestseller">Mais Vendido</span>
                 {{/if}}
-                <img src="{{this.img}}" alt="{{this.nome}}">
+                <img src="{{this.img}}" alt="{{t this.nome ../lang}}">
             </div>
             <div class="card-content">
-                <h3>{{this.nome}}</h3>
-                <p class="course-subtitle">{{this.titulo_completo}}</p>
+                <h3>{{t this.nome ../lang}}</h3>
+                <p class="course-subtitle">{{t this.titulo_completo ../lang}}</p>
                 <div class="card-footer">
                     <span class="price">{{formatCurrency this.preco}}</span>
-                    <a href="/curso/{{this.id}}" class="btn btn-primary">Ver Detalhes</a>
+                    <a href="/curso/{{this.id}}" class="btn btn-primary" data-i18n="btn_details">Ver Detalhes</a>
                 </div>
             </div>
         </article>
         {{/each}}
     </div>
-</section>
-    
-</body>
-</html>
 
+    {{#unless isFullList}}
+    <div style="text-align: center; margin-top: 50px;">
+        <a href="/cursos" class="btn btn-primary btn-large" data-i18n="btn_viewall">Ver Todos os Cursos</a>
+    </div>
+    {{/unless}}
+</section>
